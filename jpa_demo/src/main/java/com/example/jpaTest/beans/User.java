@@ -27,6 +27,10 @@ public class User implements Serializable {
 	
 	private String regTime;
 	
+	public User() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}
