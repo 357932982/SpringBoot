@@ -11,7 +11,7 @@ public class HelloService {
 	RestTemplate restTemplatel;
 	
 	public String hiService(String name) {
-		return restTemplatel.getForObject("http://SERVICE-HI?name="+name, String.class);
+		return restTemplatel.getForObject("http://SERVICE-HI/hi?name="+name, String.class);
 	}
 	
 }
