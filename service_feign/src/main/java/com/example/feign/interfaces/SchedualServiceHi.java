@@ -4,7 +4,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value="service-hi")
+import com.example.feign.controller.SchedualServiceHiHystric;
+
+@FeignClient(value="service-hi", fallback=SchedualServiceHiHystric.class)
 public interface SchedualServiceHi {
 
 	@RequestMapping(value="/hi")
