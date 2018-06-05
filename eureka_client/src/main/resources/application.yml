@@ -4,7 +4,7 @@ eureka:
       defaultZone: http://localhost:8001/eureka/
 
 server:
-  port: 9001
+  port: 9002
 spring:
   application:
     name: service-hi

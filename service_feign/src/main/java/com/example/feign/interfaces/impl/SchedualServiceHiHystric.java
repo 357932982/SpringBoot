@@ -1,4 +1,4 @@
-package com.example.feign.controller;
+package com.example.feign.interfaces.impl;
 
 import org.springframework.stereotype.Component;
 

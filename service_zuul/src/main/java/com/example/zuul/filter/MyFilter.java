@@ -1,6 +1,5 @@
 package com.example.zuul.filter;
 
-import static org.hamcrest.CoreMatchers.nullValue;
 
 import javax.servlet.http.HttpServletRequest;
 

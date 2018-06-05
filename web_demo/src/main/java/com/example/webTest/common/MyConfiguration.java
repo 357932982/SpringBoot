@@ -4,7 +4,11 @@ import org.apache.catalina.filters.RemoteIpFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
+/**
+ * 过滤器注册中心，通过方法对自定义的过滤器进行注册
+ * @author yms
+ *
+ */
 @Configuration
 public class MyConfiguration {
 	

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
-//@ServletComponentScan
+//@ServletComponentScan  用来扫描自定义带注解的filter
 public class WebDemoApplication {
 
 	public static void main(String[] args) {
