@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: config-client  # 与config-server对应的git仓库中的{application}相同
+  cloud:
+    config:
+      uri: http://localhost:8887/
+      profile: b
+      label: master

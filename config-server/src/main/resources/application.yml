@@ -1,0 +1,22 @@
+server:
+  port: 8887
+  
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/357932982/SpringCloudConfig.git
+          search-paths: config
+          
+#命名规范：项目名称-环境名称.properties
+#http请求地址和资源文件映射如下:
+#/{application}/{profile}[/{label}]
+#/{application}-{profile}.yml
+#/{label}/{application}-{profile}.yml
+#/{application}-{profile}.properties
+#/{label}/{application}-{profile}.properties
+
