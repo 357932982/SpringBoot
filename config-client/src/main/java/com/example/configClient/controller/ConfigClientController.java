@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigClientController {
 
-	@Value("${spring.application.name}")
+	@Value("${profile}")
 	private String name;
 	
 	@RequestMapping(value="/hi")

@@ -1,8 +1,17 @@
+
 spring:
-  application:
-    name: config-client  # 与config-server对应的git仓库中的{application}相同
   cloud:
     config:
-      uri: http://localhost:8887/
-      profile: b
+#      uri: http://localhost:8887/
+      profile: a
       label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+        
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/

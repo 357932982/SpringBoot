@@ -1,2 +1,7 @@
 server:
   port: 8889
+
+spring:
+  application:
+    name: config-client  # 与config-server对应的git仓库中的{application}相同
+
