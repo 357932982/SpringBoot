@@ -12,6 +12,12 @@ spring:
           uri: https://github.com/357932982/SpringCloudConfig.git
           search-paths: config
           
+  rabbitmq:
+    host: 192.168.154.129
+    port: 5672
+    username: admin
+    password: admin
+          
 #命名规范：项目名称-环境名称.properties
 #http请求地址和资源文件映射如下:
 #/{application}/{profile}[/{label}]
@@ -24,4 +30,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8001/eureka/
+      
+      
+#关闭rabbitMQ安全验证
+management:
+  security:
+    enabled: false
 
