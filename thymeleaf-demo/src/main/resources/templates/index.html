@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<div th:if="${not #lists.isEmpty(people)}">
+	    <div>
+	        <div>
+	            <h3>列表</h3>
+	        </div>
+	        <div>
+	            <ul>
+	                <li th:each="person : ${people}">
+	                    <span th:text="${person.name}"></span>
+	                    <span th:text="${person.age}"></span>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+	<div>
+		<ul th:text="${title}"></ul>
+	</div>
+	<button id="but">按钮</button>
+	<div><img th:src="@{/img/code.jpg}"></div>
+	<div><a th:href="@{/main}">跳转到main</a></div>
+	
+</body>
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}" ></script>
+<script type="text/javascript">
+
+	/* 字符串需要加引号，对象不需要 */
+	var title = "[[${title}]]"
+	$("#but").click(function(){
+		alert(title);
+	})
+</script>
+
+</html>
