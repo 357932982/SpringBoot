@@ -12,5 +12,8 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	User findByUserName(String userName);
 
 	Optional<User> findById(Integer id);
+	
+	//自定义简单查询
+	User findByUserNameOrAge(String userName, Integer age);
 
 }

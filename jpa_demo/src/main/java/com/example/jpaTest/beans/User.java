@@ -19,6 +19,8 @@ public class User implements Serializable {
 	@Column(nullable=false, unique=true)
 	private String userName;
 	
+	private Integer age;
+	
 	@Column(nullable=false)
 	private String passWord;
 	
@@ -47,6 +49,14 @@ public class User implements Serializable {
 		this.userName = userName;
 	}
 
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
 	public String getPassWord() {
 		return passWord;
 	}
@@ -71,11 +81,14 @@ public class User implements Serializable {
 		this.regTime = regTime;
 	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", userName=" + userName + ", passWord=" + passWord + ", email=" + email
-				+ ", regTile=" + regTime + "]";
+		return "User [id=" + id + ", userName=" + userName + ", age=" + age + ", passWord=" + passWord + ", email="
+				+ email + ", regTime=" + regTime + "]";
 	}
-	
 
 }
