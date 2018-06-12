@@ -2,8 +2,7 @@ package com.example.jpaTest.controller;
 
 import java.util.ArrayList;
 
-import javax.transaction.Transactional;
-
+import org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl11;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -44,25 +43,9 @@ public class StudentController {
 
 	}
 	
-	@Transactional
 	@RequestMapping(value="/modify")
 	public void test1() {
-		studentRepository.modifyById("静静1", 19, 1);
-	}
-	
-	@Transactional
-	@RequestMapping(value="/find")
-	public void find() {
-		Object[][] list = studentRepository.findStudentsAndGradeName();
-		for (Object[] arrayLists : list) {
-			for (Object arrayList : arrayLists) {
-				System.out.print(arrayList+ "  ");
-			}
-			System.out.println();
-		}
-		System.out.println(list[0][0]);
-		
-				
+		studentRepository.modifyById("静静", 18, 1);
 	}
 	
 	@RequestMapping(value="/page/{page}/{size}")
