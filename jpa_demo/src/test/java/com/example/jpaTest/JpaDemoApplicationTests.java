@@ -23,13 +23,13 @@ public class JpaDemoApplicationTests {
 	private StudentRepository studentRepository;
 	
 	@Test
-	public void contextLoads() {
+	public void test() {
 		User user = userRepository.findByUserNameOrAge("静静", 10);
 		System.out.println(user);
 	}
 	
 	@Test
-	public void testStudent() {
+	public void contextLoads() {
 		Student student = new Student();
 		student = studentRepository.getOne(1);
 		System.out.println(student);

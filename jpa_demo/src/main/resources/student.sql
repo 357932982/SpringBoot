@@ -1,4 +1,6 @@
-INSERT INTO student (id, age, email, grade, NAME) VALUES(3,12,'123@qq.com','1','小明1');
+INSERT INTO student (id, age, email, grade, NAME) VALUES(1,10,'123@qq.com','1','小明0');
+INSERT INTO student (id, age, email, grade, NAME) VALUES(2,11,'123@qq.com','1','小明1');
+INSERT INTO student (id, age, email, grade, NAME) VALUES(3,12,'123@qq.com','1','小明a');
 INSERT INTO student (id, age, email, grade, NAME) VALUES(4,13,'124@qq.com','1','小明2');
 INSERT INTO student (id, age, email, grade, NAME) VALUES(5,14,'125@qq.com','1','小明3');
 INSERT INTO student (id, age, email, grade, NAME) VALUES(6,15,'126@qq.com','1','小明4');
