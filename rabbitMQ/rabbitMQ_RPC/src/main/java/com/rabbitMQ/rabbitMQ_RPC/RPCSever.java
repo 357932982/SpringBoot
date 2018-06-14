@@ -34,7 +34,7 @@ public class RPCSever {
 			final Channel channel = connection.createChannel();
 			channel.queueDeclare(RPC_QUEUE_NAME, false, false, false, null);
 			
-			channel.basicQos(1);
+			channel.basicQos(1); //表示一次接受的消息数量
 			
 			System.out.println(" [x] Awaiting RPC requests");
 			

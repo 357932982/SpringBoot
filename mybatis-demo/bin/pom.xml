@@ -43,12 +43,6 @@
 			<scope>runtime</scope>
 		</dependency>
 		
-		<dependency>
-		    <groupId>com.alibaba</groupId>
-		    <artifactId>fastjson</artifactId>
-		    <version>1.2.47</version>
-		</dependency>
-		
 		<!-- 热部署模块 -->
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
