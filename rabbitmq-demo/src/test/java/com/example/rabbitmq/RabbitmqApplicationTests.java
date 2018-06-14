@@ -5,6 +5,8 @@ import com.example.rabbitmq.many.Sender_1;
 import com.example.rabbitmq.many.Sender_2;
 import com.example.rabbitmq.object.SendUser;
 import com.example.rabbitmq.onece.Sender;
+import com.example.rabbitmq.topic.TopicSender;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,9 @@ public class RabbitmqApplicationTests {
 
     @Autowired
     private SendUser sendUser;
+    
+    @Autowired
+    private TopicSender topicsender;
 
     @Test
     public void contextLoads() {
@@ -45,6 +50,11 @@ public class RabbitmqApplicationTests {
     public void sendUserTest(){
         User user = new User("小明", 19);
         sendUser.send(user);
+    }
+    
+    @Test
+    public void topicSender() {
+    	topicsender.send();
     }
 
 }
