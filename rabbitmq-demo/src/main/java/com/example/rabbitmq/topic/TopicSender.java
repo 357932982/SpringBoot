@@ -4,6 +4,8 @@ import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
+
 
 @Component
 public class TopicSender {
@@ -12,21 +14,15 @@ public class TopicSender {
 	private AmqpTemplate rabbitTemplate;
 	
 	public void send() {
-		String context = "hi, i am message_all";
+		String context = "hi, i am message_all " + new Date();
 		System.out.println("Sender: "+context);
 		rabbitTemplate.convertAndSend("TopicExchange", "topic.all", context);
 	}
 	
 	public void send1() {
-		String context = "hi, i am message_01";
+		String context = "hi, i am message_01 " + new Date();
 		System.out.println("Sender: "+context);
-		rabbitTemplate.convertAndSend("TopicExchange", "topic.message_01", context);
+		rabbitTemplate.convertAndSend("TopicExchange", "topic.message", context);
 	}
 	
-	public void send2() {
-		String context = "hi, i am message_02";
-		System.out.println("Sender: "+context);
-		rabbitTemplate.convertAndSend("TopicExchange", "topic.message_02", context);
-	}
-
 }

@@ -9,7 +9,7 @@ public class RabbitConfig {
 
     /**
      * 配置消息队列
-     * @return
+     * @return Queue
      */
     @Bean
     public Queue myQueue(){

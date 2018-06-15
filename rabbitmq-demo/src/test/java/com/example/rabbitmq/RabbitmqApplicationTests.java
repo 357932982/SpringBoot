@@ -1,6 +1,7 @@
 package com.example.rabbitmq;
 
 import com.example.rabbitmq.entity.User;
+import com.example.rabbitmq.fanout.FanoutSender;
 import com.example.rabbitmq.many.Sender_1;
 import com.example.rabbitmq.many.Sender_2;
 import com.example.rabbitmq.object.SendUser;
@@ -32,6 +33,9 @@ public class RabbitmqApplicationTests {
     @Autowired
     private TopicSender topicsender;
 
+    @Autowired
+    private FanoutSender fanoutSender;
+
     @Test
     public void contextLoads() {
         sender.send();
@@ -56,5 +60,16 @@ public class RabbitmqApplicationTests {
     public void topicSender() {
     	topicsender.send();
     }
+
+    @Test
+    public void topicSender1() {
+        topicsender.send1();
+    }
+
+    @Test
+    public void fanoutSend(){
+        fanoutSender.send();
+    }
+
 
 }
