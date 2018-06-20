@@ -38,8 +38,8 @@ public class EmailDemoApplicationTests {
     @Test
     public void testInlineResourceMail(){
         String rscId = "a001";
-        String rscPath = "C:\\Users\\Dell\\Desktop\\SpringCloud\\restful.jpg";
-        String content="<html><body><h1>这是有图片的邮件：</h1><img src=\'cid:" + rscId + "\' ></body></html>";
+        String rscPath = "C:\\Users\\Sony\\Desktop\\SpringBoot\\timg.jpg";
+        String content="<html><body><h1>这是有图片的邮件：</h1><img src=\"cid:" + rscId + "\" ></body></html>";
         System.out.println(content);
         mailService.sendInlineResourceMail("2929227563@qq.com", "带图片的邮件", content, rscPath, rscId);
     }
