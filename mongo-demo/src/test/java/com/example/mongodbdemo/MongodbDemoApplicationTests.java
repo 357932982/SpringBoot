@@ -25,14 +25,14 @@ public class MongodbDemoApplicationTests {
     }
 
     @Test
-    public void testFind(){
+    public void testFind() {
         User user = userDao.findUserByName("小明");
-        System.out.println("user:"+user);
+        System.out.println("user:" + user);
 
     }
 
     @Test
-    public void testUpdate(){
+    public void testUpdate() {
         User user = new User();
         user.setId(1);
         user.setName("静静");
@@ -42,13 +42,13 @@ public class MongodbDemoApplicationTests {
     }
 
     @Test
-    public void testUpdateById(){
+    public void testUpdateById() {
         String s = userDao.updateUserById(1);
         System.out.println(s);
     }
 
     @Test
-    public void testDelete(){
+    public void testDelete() {
         userDao.deleteUserById(1);
     }
 

@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigClientController {
 
-	@Value("${profile}")
-	private String name;
-	
-	@RequestMapping(value="/hi")
-	public String hi() {
-		return this.name;
-	}
+    @Value("${profile}")
+    private String name;
+
+    @RequestMapping(value = "/hi")
+    public String hi() {
+        return this.name;
+    }
 }

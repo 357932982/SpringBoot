@@ -36,10 +36,10 @@
             <scope>test</scope>
         </dependency>
 
-<!--        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId> 可以用来简化get set等
-        </dependency>-->
+        <!--        <dependency>
+                    <groupId>org.projectlombok</groupId>
+                    <artifactId>lombok</artifactId> 可以用来简化get set等
+                </dependency>-->
     </dependencies>
 
     <build>

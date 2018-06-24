@@ -16,23 +16,23 @@ import com.example.jpaTest.dao.UserRepository;
 @SpringBootTest
 public class JpaDemoApplicationTests {
 
-	@Autowired
-	private UserRepository userRepository;
-	
-	@Autowired
-	private StudentRepository studentRepository;
-	
-	@Test
-	public void test() {
-		User user = userRepository.findByUserNameOrAge("静静", 10);
-		System.out.println(user);
-	}
-	
-	@Test
-	public void contextLoads() {
-		Student student = new Student();
-		student = studentRepository.getOne(1);
-		System.out.println(student);
-	}
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private StudentRepository studentRepository;
+
+    @Test
+    public void test() {
+        User user = userRepository.findByUserNameOrAge("静静", 10);
+        System.out.println(user);
+    }
+
+    @Test
+    public void contextLoads() {
+        Student student = new Student();
+        student = studentRepository.getOne(1);
+        System.out.println(student);
+    }
 
 }

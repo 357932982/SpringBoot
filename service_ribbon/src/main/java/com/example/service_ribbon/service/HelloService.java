@@ -13,26 +13,26 @@ import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServl
 @Service
 public class HelloService {
 
-	@Autowired
-	RestTemplate restTemplatel;
-	
-	@HystrixCommand(fallbackMethod="hiError")
-	public String hiService(String name) {
-		return restTemplatel.getForObject("http://SERVICE-HI/hi?name="+name, String.class);
-	}
-	
-	public String hiError(String name) {
-        return "hi,"+name+",sorry,error!";
+    @Autowired
+    RestTemplate restTemplatel;
+
+    @HystrixCommand(fallbackMethod = "hiError")
+    public String hiService(String name) {
+        return restTemplatel.getForObject("http://SERVICE-HI/hi?name=" + name, String.class);
     }
-	
-	@Bean
-	public ServletRegistrationBean getServlet() {
-		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
-		ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
-		registrationBean.setLoadOnStartup(1);
-		registrationBean.addUrlMappings("/hystrix.stream");
-		registrationBean.setName("HystrixMetricsStreamServlet");
-		return registrationBean;
-	}
-	
+
+    public String hiError(String name) {
+        return "hi," + name + ",sorry,error!";
+    }
+
+    @Bean
+    public ServletRegistrationBean getServlet() {
+        HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
+        ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
+        registrationBean.setLoadOnStartup(1);
+        registrationBean.addUrlMappings("/hystrix.stream");
+        registrationBean.setName("HystrixMetricsStreamServlet");
+        return registrationBean;
+    }
+
 }

@@ -21,7 +21,7 @@ import java.io.UnsupportedEncodingException;
 @Component
 public class MailServiceImpl implements MailService {
 
-    private  final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private JavaMailSender mailSender;
@@ -31,6 +31,7 @@ public class MailServiceImpl implements MailService {
 
     /**
      * 发送简单邮件
+     *
      * @param to：收件人
      * @param subject： 主题
      * @param content： 正文
@@ -57,6 +58,7 @@ public class MailServiceImpl implements MailService {
 
     /**
      * 发送HTML格式邮件
+     *
      * @param to：收件人
      * @param subject： 主题
      * @param content： 正文
@@ -84,9 +86,10 @@ public class MailServiceImpl implements MailService {
 
     /**
      * 发送带附件邮件
+     *
      * @param to：收件人
-     * @param subject： 主题
-     * @param content： 正文
+     * @param subject：  主题
+     * @param content：  正文
      * @param filePath： 文件路径
      */
     @Override
@@ -103,7 +106,7 @@ public class MailServiceImpl implements MailService {
 //            添加附件文件
 //            添加多个附件可以使用多条 helper.addAttachment(fileName, file)，可以用循环
             FileSystemResource file = new FileSystemResource(new File(filePath));
-            String fileName = filePath.substring(filePath.lastIndexOf(File.separator)+1);
+            String fileName = filePath.substring(filePath.lastIndexOf(File.separator) + 1);
             System.out.println(fileName);
             helper.addAttachment(fileName, file);
 
@@ -118,9 +121,10 @@ public class MailServiceImpl implements MailService {
 
     /**
      * 发送正文中有静态资源邮件
+     *
      * @param to：收件人
-     * @param subject： 主题
-     * @param content： 正文
+     * @param subject：       主题
+     * @param content：       正文
      * @param rscPath：内嵌文件路径
      * @param rscId：静态文件名称
      */

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
-        <!-- 项目的appid -->
+    <!-- 项目的appid -->
     <property name="APP_ID" value="com.leona.cms"/>
     <property name="LOG_PATH" value="F://logs"></property>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -59,7 +59,7 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss} %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
         </encoder>
     </appender>
-        
+
     <appender name="FILE_WARN"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <filter class="ch.qos.logback.classic.filter.LevelFilter">

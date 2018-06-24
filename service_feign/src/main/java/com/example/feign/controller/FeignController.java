@@ -14,24 +14,24 @@ import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServl
 @RestController
 public class FeignController {
 
-	@Autowired
-	SchedualServiceHi schedualServiceHi;
-	
-	@RequestMapping(value="/hi")
-	public String sayHi(@RequestParam("name") String name) {
-		return schedualServiceHi.sayHiFromClientOne(name);
-		
-	}
-	
-//	springboot 版本如果是2.0则需要添加 ServletRegistrationBean 因为springboot的默认路径不是 "/hystrix.stream"
+    @Autowired
+    SchedualServiceHi schedualServiceHi;
+
+    @RequestMapping(value = "/hi")
+    public String sayHi(@RequestParam("name") String name) {
+        return schedualServiceHi.sayHiFromClientOne(name);
+
+    }
+
+    //	springboot 版本如果是2.0则需要添加 ServletRegistrationBean 因为springboot的默认路径不是 "/hystrix.stream"
 //	源码在HystrixStreamEndpoint的HystrixMetricsStreamServlet注解的源码中
-	@Bean
-	public ServletRegistrationBean getServlet() {
-		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
-		ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
-		registrationBean.setLoadOnStartup(1);
-		registrationBean.addUrlMappings("/hystrix.stream");
-		registrationBean.setName("HystrixMetricsStreamServlet");
-		return registrationBean;
-	}
+    @Bean
+    public ServletRegistrationBean getServlet() {
+        HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
+        ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
+        registrationBean.setLoadOnStartup(1);
+        registrationBean.addUrlMappings("/hystrix.stream");
+        registrationBean.setName("HystrixMetricsStreamServlet");
+        return registrationBean;
+    }
 }

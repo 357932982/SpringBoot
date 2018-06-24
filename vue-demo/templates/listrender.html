@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <!--测试v-for-->
+    <div id="demo-1">
+        <li v-for="(item, index) in items">
+            {{ parentMessage }} - {{ index+1 }} - {{ item.message }}
+        </li>
+    </div>
+
+    <!--采用对象的方式-->
+    <div id="demo-2">
+        <ul v-for="obj in objects"  v-bind:key="obj.id">
+            <li v-for="(value, key, index) in obj">
+                {{ index+1 }} -- {{ key }} -- {{ value }}
+            </li>
+        </ul>
+    </div>
+
+    <br>
+
+    <!--过滤、排序等-->
+    <div id="demo-3">
+        <li v-for="n in evenNumbers">{{ n }}</li><!--采用计算属性的方法-->
+        <hr>
+        <li v-for="n in even (numbers)">{{ n }}</li><!--采用method方式-->
+    </div>
+
+    <br>
+
+    <div id="demo-4">
+        <span v-for="n in 10">{{ n }}</span>
+    </div>
+
+    <br>
+
+    <div id="todo-list-example">
+        <form v-on:submit.prevent="addNewTodo">
+            <label for="new-todo">Add a todo</label>
+            <!-- v-model="newTodoText"用于把 value 作为组件的属性-->
+            <input v-model="newTodoText"
+                   id="new-todo"
+                   placeholder="请输入">
+            <button>Add</button>
+        </form>
+        <ul>
+            <li is="todo-item"
+                v-for="(todo, index) in todos"
+                v-bind:key="todo.id"
+                v-bind:title="todo.title"
+                v-on:remove="todos.splice(index, 1)"></li>
+        </ul>
+    </div>
+</body>
+<script src="../js/listrender.js"></script>
+</html>

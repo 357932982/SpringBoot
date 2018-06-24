@@ -2,47 +2,47 @@ package com.example.mybatis.entity;
 
 import java.io.Serializable;
 
-public class Grade implements Serializable{
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class Grade implements Serializable {
 
-	private Integer id;
-	
-	private String gradeId;
-	
-	private String gradeName;
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
 
-	public Integer getId() {
-		return id;
-	}
+    private Integer id;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String gradeId;
 
-	public String getGradeId() {
-		return gradeId;
-	}
+    private String gradeName;
 
-	public void setGradeId(String gradeId) {
-		this.gradeId = gradeId;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getGradeName() {
-		return gradeName;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setGradeName(String gradeName) {
-		this.gradeName = gradeName;
-	}
+    public String getGradeId() {
+        return gradeId;
+    }
 
-	@Override
-	public String toString() {
-		return "Grade [id=" + id + ", gradeId=" + gradeId + ", gradeName=" + gradeName + "]";
-	}
-	
+    public void setGradeId(String gradeId) {
+        this.gradeId = gradeId;
+    }
+
+    public String getGradeName() {
+        return gradeName;
+    }
+
+    public void setGradeName(String gradeName) {
+        this.gradeName = gradeName;
+    }
+
+    @Override
+    public String toString() {
+        return "Grade [id=" + id + ", gradeId=" + gradeId + ", gradeName=" + gradeName + "]";
+    }
+
 
 }

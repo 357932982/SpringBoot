@@ -12,9 +12,9 @@ public class Sender_1 {
     @Autowired
     private AmqpTemplate rabbitTemplate;
 
-    public void send(int i){
-        String context = "sender_1, hello "+ i +" "+ new Date();
-        System.out.println("Sender_1: "+context);
+    public void send(int i) {
+        String context = "sender_1, hello " + i + " " + new Date();
+        System.out.println("Sender_1: " + context);
         rabbitTemplate.convertAndSend("one2many", context);
     }
 }

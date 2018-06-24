@@ -42,7 +42,7 @@ public class RabbitmqApplicationTests {
     }
 
     @Test
-    public void sendUserTest(){
+    public void sendUserTest() {
         User user = new User("小明", 19);
         sendUser.send(user);
     }

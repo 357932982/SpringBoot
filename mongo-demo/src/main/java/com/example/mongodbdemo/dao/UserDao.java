@@ -18,18 +18,20 @@ public class UserDao {
 
     /**
      * 创建对象
+     *
      * @param user: user对象
      */
-    public void saveUser(User user){
+    public void saveUser(User user) {
         mongoTemplate.save(user);
     }
 
     /**
      * 根据用户名查询
+     *
      * @param name
      * @return
      */
-    public User findUserByName(String name){
+    public User findUserByName(String name) {
         Query query = new Query(Criteria.where("name").is(name));
         User user = mongoTemplate.findOne(query, User.class);
         return user;
@@ -37,10 +39,11 @@ public class UserDao {
 
     /**
      * 更新对象
+     *
      * @param user
      * @return
      */
-    public String updateUser(User user){
+    public String updateUser(User user) {
         Query query = new Query(Criteria.where("id").is(user.getId()));
         Update update = new Update().set("name", user.getName()).set("password", user.getPassword());
         //更新查询返回结果集的第一条
@@ -52,17 +55,18 @@ public class UserDao {
 
     /**
      * 根据ID删除
+     *
      * @param id
      * @return
      */
-    public String updateUserById(Integer id){
+    public String updateUserById(Integer id) {
         Query query = new Query(Criteria.where("id").is(id));
         Update update = new Update().set("name", "花花");
         UpdateResult result = mongoTemplate.updateFirst(query, update, User.class);
         return result.toString();
     }
 
-    public void deleteUserById(Integer id){
+    public void deleteUserById(Integer id) {
         Query query = new Query(Criteria.where("id").is(id));
         mongoTemplate.remove(query, User.class);
     }

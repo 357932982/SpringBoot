@@ -23,49 +23,49 @@ import antlr.collections.List;
 @RestController
 public class UserController {
 
-	@Autowired
-	private UserService userService;
-	
-	@RequestMapping(value="/find/{name}")
-	public User getUserByName(@PathVariable("name") String name) {
-		return userService.getUserByName(name);
-	}
-	
-	@GetMapping(value="/user")
-	public ArrayList<User> getAll() {
-		return userService.findAll();
-	}
-	
-	@GetMapping(value="/user/{id}")
-	public User getById(@PathVariable("id") Integer id) {
-		return userService.findById(id);
-	}
-	
-	@PostMapping(value="/user")
-	public User insert(HttpServletRequest request) {
-		User user = new User();
-		String userName = request.getParameter("userName");
-		String passWord = request.getParameter("passWord");
-		String email = request.getParameter("email");
-		user.setUserName(userName);
-		user.setPassWord(passWord);
-		user.setEmail(email);
-		return userService.save(user);
-	}
-	
-	@PutMapping(value="/user/{id}")
-	public User updateUser(@PathVariable("id") Integer id,
-							@RequestParam("userName") String userName,
-							@RequestParam("email") String email) {
-		User user = userService.findOne(id);		
-		user.setUserName(userName);
-		user.setEmail(email);
-		return userService.save(user);
-	}
-	
-	@DeleteMapping(value="/user/{id}")
-	public void deleteUser(@PathVariable("id") Integer id){
-		userService.delete(id);
-	}
+    @Autowired
+    private UserService userService;
+
+    @RequestMapping(value = "/find/{name}")
+    public User getUserByName(@PathVariable("name") String name) {
+        return userService.getUserByName(name);
+    }
+
+    @GetMapping(value = "/user")
+    public ArrayList<User> getAll() {
+        return userService.findAll();
+    }
+
+    @GetMapping(value = "/user/{id}")
+    public User getById(@PathVariable("id") Integer id) {
+        return userService.findById(id);
+    }
+
+    @PostMapping(value = "/user")
+    public User insert(HttpServletRequest request) {
+        User user = new User();
+        String userName = request.getParameter("userName");
+        String passWord = request.getParameter("passWord");
+        String email = request.getParameter("email");
+        user.setUserName(userName);
+        user.setPassWord(passWord);
+        user.setEmail(email);
+        return userService.save(user);
+    }
+
+    @PutMapping(value = "/user/{id}")
+    public User updateUser(@PathVariable("id") Integer id,
+                           @RequestParam("userName") String userName,
+                           @RequestParam("email") String email) {
+        User user = userService.findOne(id);
+        user.setUserName(userName);
+        user.setEmail(email);
+        return userService.save(user);
+    }
+
+    @DeleteMapping(value = "/user/{id}")
+    public void deleteUser(@PathVariable("id") Integer id) {
+        userService.delete(id);
+    }
 
 }

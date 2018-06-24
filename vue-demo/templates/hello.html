@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+
+    <hr>
+
+    <div id="app-2">
+        <span v-bind:title="message"> <!--将vue实例中的message属性绑定到该标签的title特性上-->
+            鼠标悬停查看动态绑定提示信息！
+        </span>
+    </div>
+
+    <hr>
+    <br>
+
+
+    <div id="app-3">
+        <p v-if="seen">现在出现了</p>
+    </div>
+
+    <hr>
+    <br>
+
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <hr>
+    <br>
+
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">转换</button>
+    </div>
+
+    <hr>
+    <br>
+
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+
+    <hr>
+    <br>
+    <div id="app-7">
+        <ol>
+            <!--创建一个todo-item组件的实例-->
+            <todo-item></todo-item>
+        </ol>
+    </div>
+
+    <hr>
+    <br>
+
+    <div id="app-8">
+        <ol>
+            <test-item
+                    v-for="item in groceryList"
+                    v-bind:test="item"
+                    v-bind:key="item.id">
+            </test-item>
+        </ol>
+    </div>
+
+
+
+
+</body>
+
+<script src="../js/hello.js"></script>
+</html>

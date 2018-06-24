@@ -1,15 +1,15 @@
 
 html {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  -webkit-text-size-adjust: 100%!important;
-  -ms-text-size-adjust: 100%!important;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100% !important;
+    -ms-text-size-adjust: 100% !important;
 }
 
 html * {
-  outline: none;
-  -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html,
@@ -34,155 +34,173 @@ dl,
 dt,
 dd,
 input {
-  margin: 0;
-  padding: 0;
-  font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
 }
 
 table {
-  border: none;
+    border: none;
 }
+
 a {
-  display: block;
-  outline: none;
-  text-decoration: none;
+    display: block;
+    outline: none;
+    text-decoration: none;
 }
+
 .mar a {
-  color: #FFF;
+    color: #FFF;
 }
+
 .both a {
-  color: #000;
+    color: #000;
 }
 
 .leftfloat {
-  float: left;
+    float: left;
 }
+
 .rightfloat {
-  float: right;
+    float: right;
 }
+
 .clear {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .both {
-  display: inline-block;
+    display: inline-block;
 }
+
 .block {
-  display: block;
+    display: block;
 }
+
 .inline {
-  display: inline;
+    display: inline;
 }
+
 .inlineblock {
-  display: inline-block;
+    display: inline-block;
 }
 
 .mid {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 .body {
-  font-size: 0.4rem;
+    font-size: 0.4rem;
 }
+
 .ground-back {
-  width: 100%;
-  background-color: #E46D4D;
-  color: #FFF;
+    width: 100%;
+    background-color: #E46D4D;
+    color: #FFF;
 }
+
 .ground-back1 {
-  width: 100%;
-  background-color: #FFF;
-  color: #000;
+    width: 100%;
+    background-color: #FFF;
+    color: #000;
 }
+
 .padding {
-  padding-top: 2.8vh;
+    padding-top: 2.8vh;
 }
+
 .paddingb {
-  padding-bottom: 5vh;
+    padding-bottom: 5vh;
 }
 
 .center-text {
-  vertical-align: middle;
-  line-height: 1rem;
-  text-align: center;
+    vertical-align: middle;
+    line-height: 1rem;
+    text-align: center;
 }
 
 .head-text {
-  overflow: hidden;
-  height: 7vh;
-  font-size: 0.54rem;
-  font-weight: 550;
-  line-height: 7vh;
-/*  line-height: 1.4rem;*/
+    overflow: hidden;
+    height: 7vh;
+    font-size: 0.54rem;
+    font-weight: 550;
+    line-height: 7vh;
+    /*  line-height: 1.4rem;*/
 }
+
 .head-text1 {
-  height: 16vh;
-  font-size: 0.7rem;
-  line-height: 16vh;
-/*  line-height: 2rem;*/
+    height: 16vh;
+    font-size: 0.7rem;
+    line-height: 16vh;
+    /*  line-height: 2rem;*/
 }
+
 .head-text3 {
-  height: 6vh;
-/*  line-height: 1.2rem;*/
-  line-height: 6vh;
-  border-bottom: 1px solid #CCCCCC;
+    height: 6vh;
+    /*  line-height: 1.2rem;*/
+    line-height: 6vh;
+    border-bottom: 1px solid #CCCCCC;
 }
-.head-text span { 
-  font-size: 0.6rem;
+
+.head-text span {
+    font-size: 0.6rem;
 }
 
 .mon-text {
-  font-size: 0.5rem;
+    font-size: 0.5rem;
 }
+
 .mon-txt {
-  font-size: 0.5rem;
-  line-height: 1rem;
+    font-size: 0.5rem;
+    line-height: 1rem;
 }
 
 .btn-text {
-  margin: 1rem;
+    margin: 1rem;
 }
+
 .btn-pad {
-  padding: 0.14rem 0;
+    padding: 0.14rem 0;
 }
 
 .center {
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-}
-.center1 {
-  width: 96%;
-  margin: 0 auto;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
 }
 
+.center1 {
+    width: 96%;
+    margin: 0 auto;
+}
 
 .centent {
-  padding: 1rem 0 0.5rem 0;
+    padding: 1rem 0 0.5rem 0;
 }
 
 .mar {
-  margin: 0 auto;
-  padding: 6%;
+    margin: 0 auto;
+    padding: 6%;
 }
 
 .box {
-  border: 0.037rem solid #FFF;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
+    border: 0.037rem solid #FFF;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
 }
 
 .boxb {
-  margin: 0.6rem auto;
+    margin: 0.6rem auto;
 }
+
 .boxc {
-  margin-bottom: 0.6rem;
+    margin-bottom: 0.6rem;
 }
 
 .boxa {
-  border-top: 0.05rem solid #CCC;
-  border-bottom: 0.05rem solid #CCC;
+    border-top: 0.05rem solid #CCC;
+    border-bottom: 0.05rem solid #CCC;
 }

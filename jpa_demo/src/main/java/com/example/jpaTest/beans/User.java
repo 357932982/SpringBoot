@@ -10,85 +10,85 @@ import javax.persistence.Id;
 @Entity
 public class User implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@GeneratedValue
-	private Integer id;
-	
-	@Column(nullable=false, unique=true)
-	private String userName;
-	
-	private Integer age;
-	
-	@Column(nullable=false)
-	private String passWord;
-	
-	@Column(nullable=true)
-	private String email;
-	
-	private String regTime;
-	
-	public User() {
-		super();
-	}
+    private static final long serialVersionUID = 1L;
 
-	public Integer getId() {
-		return id;
-	}
+    @Id
+    @GeneratedValue
+    private Integer id;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    @Column(nullable = false, unique = true)
+    private String userName;
 
-	public String getUserName() {
-		return userName;
-	}
+    private Integer age;
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    @Column(nullable = false)
+    private String passWord;
 
-	public Integer getAge() {
-		return age;
-	}
+    @Column(nullable = true)
+    private String email;
 
-	public void setAge(Integer age) {
-		this.age = age;
-	}
+    private String regTime;
 
-	public String getPassWord() {
-		return passWord;
-	}
+    public User() {
+        super();
+    }
 
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
-	public String getRegTime() {
-		return regTime;
-	}
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	public void setRegTime(String regTime) {
-		this.regTime = regTime;
-	}
+    public Integer getAge() {
+        return age;
+    }
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", userName=" + userName + ", age=" + age + ", passWord=" + passWord + ", email="
-				+ email + ", regTime=" + regTime + "]";
-	}
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getRegTime() {
+        return regTime;
+    }
+
+    public void setRegTime(String regTime) {
+        this.regTime = regTime;
+    }
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
+
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", userName=" + userName + ", age=" + age + ", passWord=" + passWord + ", email="
+                + email + ", regTime=" + regTime + "]";
+    }
 
 }

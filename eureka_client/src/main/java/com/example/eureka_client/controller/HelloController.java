@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-	
-	@Value("${server.port}")
-	public String port;
-	
-	@RequestMapping(value="/hi")
-	public String home(@RequestParam("name") String name) {
-		return "hi "+name+",i am from port:"+port;
-	}
+
+    @Value("${server.port}")
+    public String port;
+
+    @RequestMapping(value = "/hi")
+    public String home(@RequestParam("name") String name) {
+        return "hi " + name + ",i am from port:" + port;
+    }
 
 }

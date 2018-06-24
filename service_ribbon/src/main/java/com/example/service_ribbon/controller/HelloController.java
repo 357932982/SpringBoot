@@ -9,13 +9,13 @@ import com.example.service_ribbon.service.HelloService;
 
 @RestController
 public class HelloController {
-	
-	@Autowired
-	private HelloService helloService;
-	
-	@RequestMapping(value="/hi")
-	public String hello(@RequestParam("name") String name) {
-		return helloService.hiService(name);
-	}
+
+    @Autowired
+    private HelloService helloService;
+
+    @RequestMapping(value = "/hi")
+    public String hello(@RequestParam("name") String name) {
+        return helloService.hiService(name);
+    }
 
 }

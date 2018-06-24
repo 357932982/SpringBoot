@@ -17,37 +17,37 @@ public class FanoutConfig {
     private final static String FANOUT_EXCHANGE = "fanout_exchange";
 
     @Bean
-    public Queue queue_01(){
+    public Queue queue_01() {
         return new Queue(QUEUE_01);
     }
 
     @Bean
-    public Queue queue_02(){
+    public Queue queue_02() {
         return new Queue(QUEUE_02);
     }
 
     @Bean
-    public Queue queue_03(){
+    public Queue queue_03() {
         return new Queue(QUEUE_03);
     }
 
     @Bean
-    FanoutExchange fanoutExchange(){
+    FanoutExchange fanoutExchange() {
         return new FanoutExchange(FANOUT_EXCHANGE);
     }
 
     @Bean
-    Binding bindingFanout_01(Queue queue_01, FanoutExchange fanoutExchange){
+    Binding bindingFanout_01(Queue queue_01, FanoutExchange fanoutExchange) {
         return BindingBuilder.bind(queue_01).to(fanoutExchange);
     }
 
     @Bean
-    Binding bindingFanout_02(Queue queue_02, FanoutExchange fanoutExchange){
+    Binding bindingFanout_02(Queue queue_02, FanoutExchange fanoutExchange) {
         return BindingBuilder.bind(queue_02).to(fanoutExchange);
     }
 
     @Bean
-    Binding bindingFanout_03(Queue queue_03, FanoutExchange exchange){
+    Binding bindingFanout_03(Queue queue_03, FanoutExchange exchange) {
         return BindingBuilder.bind(queue_03).to(exchange);
     }
 }

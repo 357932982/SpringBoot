@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.feign.interfaces.impl.SchedualServiceHiHystric;
 
-@FeignClient(value="service-hi", fallback=SchedualServiceHiHystric.class)
+@FeignClient(value = "service-hi", fallback = SchedualServiceHiHystric.class)
 public interface SchedualServiceHi {
 
-	@RequestMapping(value="/hi")
-	public String sayHiFromClientOne(@RequestParam("name") String name);
+    @RequestMapping(value = "/hi")
+    public String sayHiFromClientOne(@RequestParam("name") String name);
 }

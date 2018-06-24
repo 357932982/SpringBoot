@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class FanoutReceiver_02 {
 
     @RabbitHandler
-    public void process(String message){
-        System.out.println("FanoutReceiver_02"+message);
+    public void process(String message) {
+        System.out.println("FanoutReceiver_02" + message);
     }
 }

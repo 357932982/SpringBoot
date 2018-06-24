@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p>{{foo}}</p>
+        <button v-on:click="foo='bbb'">Change</button>
+    </div>
+
+    <br>
+    <!--Mustache-->
+    <div id="example">
+        <!--<span v-once>这个将不会改变: {{ a }}</span>--><!--执行一次性地插值，当数据改变时，插值处的内容不会更新-->
+        <span>{{a}}</span>
+    </div>
+
+    <br>
+
+    <div id="app-1">
+        <p>Using mustaches: {{rawHtml}}</p>
+        <p>Using v-html directive:<span v-html="rawHtml"></span></p><!--用rawHtml替换span标签内部的内容-->
+    </div>
+
+    <div id="app-2">
+        <span v-bind:id="dynamicId">abc</span>
+    </div>
+
+    <div id="app-3">
+        <p>{{number + 1}}</p>
+        <p>{{ok ? 'Yes' : 'No'}}</p>
+        <p>{{message.split('').reverse().join('')}}</p>
+        <p>{{new Date().toLocaleString()}}</p>
+    </div>
+
+</body>
+<script src="../js/template.js"></script>
+</html>

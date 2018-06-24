@@ -9,8 +9,8 @@ public class SchedulerTask_01 {
     private Integer count = 0;
 
     @Scheduled(cron = "*/1 * * * * ?")
-    public void process(){
-        System.out.println("this is scheduler task running: "+ count++);
+    public void process() {
+        System.out.println("this is scheduler task running: " + count++);
     }
 
 }

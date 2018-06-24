@@ -9,62 +9,62 @@ import org.hibernate.annotations.Proxy;
 //@Proxy(lazy=false)
 @Entity
 public class Student {
-	
-	@Id
-	@GeneratedValue
-	private Integer id;
-	
-	private String name;
-	
-	private Integer age;
-	
-	private String email;
-	
-	private String grade;
 
-	public Integer getId() {
-		return id;
-	}
+    @Id
+    @GeneratedValue
+    private Integer id;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String name;
 
-	public String getName() {
-		return name;
-	}
+    private Integer age;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private String email;
 
-	public Integer getAge() {
-		return age;
-	}
+    private String grade;
 
-	public void setAge(Integer age) {
-		this.age = age;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getGrade() {
-		return grade;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setGrade(String grade) {
-		this.grade = grade;
-	}
+    public Integer getAge() {
+        return age;
+    }
 
-	@Override
-	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", age=" + age + ", email=" + email + ", grade=" + grade + "]";
-	}
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    @Override
+    public String toString() {
+        return "Student [id=" + id + ", name=" + name + ", age=" + age + ", email=" + email + ", grade=" + grade + "]";
+    }
 
 }

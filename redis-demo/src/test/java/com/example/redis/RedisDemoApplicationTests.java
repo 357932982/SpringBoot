@@ -12,18 +12,17 @@ import com.example.redis.model.Person;
 @SpringBootTest
 public class RedisDemoApplicationTests {
 
-	@Autowired
-	private RedisTemplate<String, String> redisTemplate;
-	
+    @Autowired
+    private RedisTemplate<String, String> redisTemplate;
 
-	@Test
-	public void set() {
-		Person person = new Person("小明", "20");
-		redisTemplate.opsForValue().set("001", person.toString());
-		Object object = redisTemplate.opsForValue().get("001");
-		System.out.println(object.toString());
-	}
-	
+
+    @Test
+    public void set() {
+        Person person = new Person("小明", "20");
+        redisTemplate.opsForValue().set("001", person.toString());
+        Object object = redisTemplate.opsForValue().get("001");
+        System.out.println(object.toString());
+    }
 
 
 }

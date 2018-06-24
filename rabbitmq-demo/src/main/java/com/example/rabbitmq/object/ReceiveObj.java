@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class ReceiveObj {
 
     @RabbitHandler
-    public void process(User user){
-        System.out.println("Receiver: "+user);
+    public void process(User user) {
+        System.out.println("Receiver: " + user);
     }
 }

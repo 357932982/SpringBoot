@@ -20,8 +20,8 @@ public class EmailDemoApplicationTests {
     }
 
     @Test
-    public void testHtmlMail(){
-        String content="<html>\n" +
+    public void testHtmlMail() {
+        String content = "<html>\n" +
                 "<body>\n" +
                 "    <h1>hello world ! 这是一封Html邮件!</h1>\n" +
                 "</body>\n" +
@@ -30,16 +30,16 @@ public class EmailDemoApplicationTests {
     }
 
     @Test
-    public void testAttachmentsMail(){
+    public void testAttachmentsMail() {
         String filePath = "F:\\BaiduNetdiskDownload\\tree.txt";
-        mailService.sendAttachmentMail("2929227563@qq.com", "附件邮件", "有附件", filePath );
+        mailService.sendAttachmentMail("2929227563@qq.com", "附件邮件", "有附件", filePath);
     }
 
     @Test
-    public void testInlineResourceMail(){
+    public void testInlineResourceMail() {
         String rscId = "a001";
         String rscPath = "C:\\Users\\Sony\\Desktop\\SpringBoot\\timg.jpg";
-        String content="<html><body><h1>这是有图片的邮件：</h1><img src=\"cid:" + rscId + "\" ></body></html>";
+        String content = "<html><body><h1>这是有图片的邮件：</h1><img src=\"cid:" + rscId + "\" ></body></html>";
         System.out.println(content);
         mailService.sendInlineResourceMail("2929227563@qq.com", "带图片的邮件", content, rscPath, rscId);
     }

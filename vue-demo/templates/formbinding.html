@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+    <div id="demo-1">
+        <input v-model="message" placeholder="请输入">
+        <p>Message is: {{ message }}</p>
+    </div>
+
+    <br>
+
+    <div id="demo-2">
+        <span>多行文本：</span>
+        <p style="white-space: pre-line">{{ message }}</p>
+        <br>
+        <textarea v-model="message" placeholder="add multiple lines"></textarea>
+    </div>
+
+    <!--复选框-->
+    <br>
+    <div id="demo-3">
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">{{ checked }}</label>
+    </div>
+
+    <div id="demo-4">
+        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <br>
+        <span>Checked names: {{ checkedNames }}</span>
+    </div>
+
+    <!--单选框-->
+    <br>
+    <div id="demo-5">
+        <input type="radio" id="one" value="One" v-model="picked">
+        <label for="one">One</label>
+        <input type="radio" id="two" value="Two" v-model="picked">
+        <label for="two">Two</label>
+        <br>
+        <span>Picked: {{ picked }}</span>
+    </div>
+
+    <!--选择框-->
+    <br>
+    <div id="demo-6">
+        <select v-model="selected">
+            <option disabled value="">请选择</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+    </div>
+
+</body>
+<script src="../js/formbinding.js"></script>
+</html>
+

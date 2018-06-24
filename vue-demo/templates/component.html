@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+    <!--组件练习-->
+    <div id="component-demo">
+        <button-counter></button-counter>
+    </div>
+
+    <br>
+    <!--组件中的props属性-->
+    <div id="component-demo-2">
+        <blog-post title="AAA"></blog-post>
+        <blog-post title="BBB"></blog-post>
+        <blog-post title="CCC"></blog-post>
+    </div>
+
+    <br>
+    <!--动态传递prop-->
+    <div id="component-demo-3">
+        <blog-post v-for="post in posts"
+                   v-bind:key="post.id"
+                   v-bind:title="post.title">
+
+        </blog-post>
+    </div>
+
+    <hr>
+    <br>
+
+    <div id="component-demo-4">
+        <blog-post-a v-bind:style="{ fontSize: postFontSize + 'em' }"
+                     v-for="post in posts"
+                     v-bind:key="post.id"
+                     v-bind:post="post"
+                     v-on:enlarge-text="onEnlargeText"
+                   >
+        </blog-post-a>
+    </div>
+</body>
+<script src="../js/component.js"></script>
+</html>

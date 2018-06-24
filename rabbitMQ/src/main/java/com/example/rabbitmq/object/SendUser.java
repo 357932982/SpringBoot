@@ -11,8 +11,8 @@ public class SendUser {
     @Autowired
     private AmqpTemplate rabbitMQTemplate;
 
-    public void send(User user){
-        System.out.println("Send: "+user);
+    public void send(User user) {
+        System.out.println("Send: " + user);
         rabbitMQTemplate.convertAndSend("obj", user);
     }
 }

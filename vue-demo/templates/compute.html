@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+    <div id="example">
+        <p>Original message: "{{ message }}"</p>
+        <p>Computed reversed message: "{{ reversedMessage }}"</p>
+        <p>Methods reversed message: "{{ reversedMessage11() }}"</p>
+    </div>
+
+    <br>
+
+    <div id="demo">{{ fullName }}</div>
+
+    <div id="demo-2">
+        <p>{{ firstName }}</p>
+        <p>{{ lastName }}</p>
+        <p>{{ fullName }}</p>
+    </div>
+
+    <br>
+
+    <!--测试绑定对象class-->
+    <div id="demo-3">
+        <p class="static" v-bind:class="{active:isActive, test:hasError}">测试绑定对象class， 采用内联模板</p>
+        <p class="static" v-bind:class="classObject">测试绑定对象class, 采用计算属性</p>
+        <p class="static" v-bind:class="[activateClass, errorClass]">测试绑定对象class, 采用数组语法</p>
+        <p v-bind:class="[isActive? 'A':'B']">测试绑定对象class, 采用用三元表达式</p>
+        <p class="static" v-bind:class="[{active:isActive}, errorClass]">测试绑定对象class, 数组语法中使用对象语法</p>
+    </div>
+
+    <br>
+    <!--当在一个自定义组件上使用 class 属性时，这些类将被添加到该组件的根元素上面。这个元素上已经存在的类不会被覆盖。-->
+    <div id="demo-4">
+        <my-component class="native"></my-component>
+        <my-component v-bind:class="{active: isActive}">带数据的绑定</my-component>
+    </div>
+
+    <br>
+
+    <!--测试绑定对象style-->
+    <div id="demo-5">
+        <p v-bind:style="{color: activeColor, fontSize: fontSize + 'px'}">测试style</p>
+        <p v-bind:style="styleObject">测试style，推荐采用对象方式</p>
+    </div>
+
+</body>
+<script src="../js/compute.js"></script>
+</html>

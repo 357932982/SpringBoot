@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.js"></script>
+
+</head>
+<body>
+    <div id="demo-1">
+        <h1 v-if="seen">Yes</h1>
+        <h1 v-else>No</h1>
+
+    </div>
+
+    <br>
+
+    <div id="demo-2">
+        <div v-if="type === 'A'">
+            A
+        </div>
+        <div v-else-if="type === 'B'">
+            B
+        </div>
+        <div v-else-if="type === 'C'">
+            C
+        </div>
+        <div v-else>
+            Not A/B/C
+        </div>
+    </div>
+
+    <br>
+
+    <div id="demo-3">
+        <div v-if="result">
+            Now you see me
+        </div>
+        <div v-else>
+            Now you don't
+        </div>
+    </div>
+
+
+</body>
+<script src="../js/condition.js"></script>
+</html>

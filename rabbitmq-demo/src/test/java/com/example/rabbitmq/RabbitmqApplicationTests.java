@@ -29,7 +29,7 @@ public class RabbitmqApplicationTests {
 
     @Autowired
     private SendUser sendUser;
-    
+
     @Autowired
     private TopicSender topicsender;
 
@@ -51,14 +51,14 @@ public class RabbitmqApplicationTests {
     }
 
     @Test
-    public void sendUserTest(){
+    public void sendUserTest() {
         User user = new User("小明", 19);
         sendUser.send(user);
     }
-    
+
     @Test
     public void topicSender() {
-    	topicsender.send();
+        topicsender.send();
     }
 
     @Test
@@ -67,7 +67,7 @@ public class RabbitmqApplicationTests {
     }
 
     @Test
-    public void fanoutSend(){
+    public void fanoutSend() {
         fanoutSender.send();
     }
 

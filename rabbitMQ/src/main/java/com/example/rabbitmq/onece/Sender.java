@@ -12,9 +12,9 @@ public class Sender {
     @Autowired
     private AmqpTemplate amqpTemplate;
 
-    public void send(){
+    public void send() {
         String context = "hello  " + new Date();
-        System.out.println("Sender: "+ context);
+        System.out.println("Sender: " + context);
         this.amqpTemplate.convertAndSend("hello", context);
     }
 }

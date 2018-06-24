@@ -18,7 +18,7 @@ public class SchedulerTask_02 {
     private static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
 
     @Scheduled(fixedRate = 2000)
-    public void process(){
+    public void process() {
         System.out.println("现在时间：" + simpleDateFormat.format(new Date()));
     }
 }
